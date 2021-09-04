@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.StudentMapper">
+    <!--    List<Student> queryStudent();-->
+    <resultMap id="studentId" type="com.bilibili.bean.Student">
+        <id property="sid" column="sno"/>
+        <result property="sname" column="sname"/>
+        <result property="cid" column="cid"/>
+    </resultMap>
+    <select id="queryStudent" resultType="com.bilibili.bean.Student" resultMap="studentId">
+        select *
+        from student
+    </select>
+    <!--    void addStudent(List<Student> students);-->
+
+    <insert id="addStudent" parameterType="com.bilibili.bean.Student">
+        insert into student (sno, sname, cid) VALUES
+        <foreach collection="students" item="student" separator=",">
+            (#{student.sid},#{student.sname},#{student.cid})
+        </foreach>
+    </insert>
+
+    <!--    void updateStudent(List<Student> students);-->
+<!--    <update id="updateStudent" parameterType="com.bilibili.bean.Student">-->
+<!--        <foreach collection="students" item="student">-->
+<!--        update student-->
+<!--            <set>-->
+<!--                student.sname=#{student.sname},student.cid=#{student.cid} where sno=#{student.sid}-->
+<!--            </set>-->
+
+<!--            # update student set sname=#{student.sname},cid=#{student.cid} where sno=#{student.sid}-->
+<!--        </foreach>-->
+<!--    </update>-->
+
+
+</mapper>

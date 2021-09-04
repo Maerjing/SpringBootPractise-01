@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.AdminMapper">
+<!--    Admin queryAdmin();-->
+    <select id="queryAdmin" resultType="com.bilibili.bean.Admin">
+        select tid,tname from admin where tid=#{tid}
+    </select>
+</mapper>

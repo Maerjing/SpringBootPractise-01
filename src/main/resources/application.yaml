@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    druid:
+      filters: stat,wall
+      url: jdbc:mysql://localhost:3306/libdb?serverTimezone=UTC&useSSL=true&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: w2213768002
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-password: admin
+        login-username: admin
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+logging:
+  level:
+    com:
+      bilibili:
+          mapper: DEBUG
