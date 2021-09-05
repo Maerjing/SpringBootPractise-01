@@ -17,10 +17,4 @@ public class TestController {
         Integer integer = jdbcTemplate.queryForObject("select count(*) from book", Integer.class);
         return integer;
     }
-
-    @ResponseBody
-    @GetMapping("/zsh")
-    public String zhs(){
-        return "zsh";
-    }
 }
