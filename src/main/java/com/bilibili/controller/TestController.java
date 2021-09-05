@@ -15,7 +15,6 @@ public class TestController {
     @GetMapping("/sql")
     public int sql(){
         Integer integer = jdbcTemplate.queryForObject("select count(*) from book", Integer.class);
-        dd
         return integer;
     }
 }
