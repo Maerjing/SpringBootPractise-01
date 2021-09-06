@@ -13,11 +13,11 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
         Object attribute = session.getAttribute("user");
-        if (attribute!=null){
+        if (attribute != null) {
             return true;
         }
-        request.setAttribute("msg","重新登录!");
-        request.getRequestDispatcher("/").forward(request,response);
+        request.setAttribute("msg", "重新登录!");
+        request.getRequestDispatcher("/").forward(request, response);
         return false;
     }
 }

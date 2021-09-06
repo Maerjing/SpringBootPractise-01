@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
     StudentMapper studentMapper;
+
     @Override
     public List<Student> queryStudent() {
         List<Student> students = studentMapper.queryStudent();
@@ -24,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
         return students;
     }
 
-//    @Transactional
+    //    @Transactional
     @Override
     public void addStudent(List<Student> students) {
         studentMapper.addStudent(students);

@@ -28,9 +28,10 @@ public class TableController {
     @GetMapping("/admin")
     public Admin admin(@RequestParam("tid") String tid) {
         Admin admin = adminServiceImpl.queryAdmin(tid);
-        log.info("admin的值为:",admin);
+        log.info("admin的值为:", admin);
         return admin;
     }
+
     @GetMapping("/basic_table")
     public String basic_table(Model model) {
         List<User> list = new ArrayList<User>();
@@ -51,7 +52,7 @@ public class TableController {
 
     @GetMapping("/dynamic_table")
     public String dynamic_table() {
-        int a=2/0;
+        int a = 2 / 0;
         return "/table/dynamic_table";
     }
 

@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @Autowired
     JdbcTemplate jdbcTemplate;
+
     @ResponseBody
     @GetMapping("/sql")
-    public int sql(){
+    public int sql() {
         Integer integer = jdbcTemplate.queryForObject("select count(*) from book", Integer.class);
-        int a=10;
+        int a = 10;
         return integer;
     }
 }

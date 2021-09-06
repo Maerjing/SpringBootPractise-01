@@ -14,10 +14,10 @@ spring:
         login-username: admin
 
 mybatis:
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: ./src/mian/resources/mybatis/mapper/*.xml
 
 logging:
   level:
     com:
       bilibili:
-          mapper: DEBUG
+        mapper: DEBUG

@@ -21,18 +21,18 @@ public class FormController {
 
     @PostMapping("/upload")
     public String upload(@RequestParam("email") String email,
-                         @RequestParam("username")String username,
+                         @RequestParam("username") String username,
                          @RequestPart("headimg") MultipartFile headimg,
                          @RequestPart("photos") MultipartFile[] photos) throws IOException {
-        if (!headimg.isEmpty()){
+        if (!headimg.isEmpty()) {
             String originalFilename = headimg.getOriginalFilename();
-            headimg.transferTo(new File("E:\\图片\\"+originalFilename));
+            headimg.transferTo(new File("E:\\图片\\" + originalFilename));
         }
 
         for (MultipartFile photo : photos) {
-            if (!photo.isEmpty()){
+            if (!photo.isEmpty()) {
                 String originalFilename = photo.getOriginalFilename();
-                photo.transferTo(new File("E:\\图片\\"+originalFilename));
+                photo.transferTo(new File("E:\\图片\\" + originalFilename));
             }
         }
         return "index";

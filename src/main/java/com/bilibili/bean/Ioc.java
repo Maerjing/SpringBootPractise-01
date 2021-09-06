@@ -10,6 +10,7 @@ interface Person {
 interface Axe {
     void chop();
 }
+
 @Component
 class StoneAxe implements Axe {
     @Override
@@ -24,8 +25,9 @@ class SteelAxe implements Axe {
         System.out.println("使用钢斧砍!");
     }
 }
+
 @Component
-class Chinese implements Person{
+class Chinese implements Person {
     private Axe axe;
 
     public void setAxe(Axe axe) {
@@ -37,12 +39,14 @@ class Chinese implements Person{
         axe.chop();
     }
 }
+
 public class Ioc {
     @Autowired
-    static Chinese chinese=new Chinese();
+    static Chinese chinese = new Chinese();
+
     public static void main(String[] args) {
 
-        StoneAxe stoneAxe=new StoneAxe();
+        StoneAxe stoneAxe = new StoneAxe();
         chinese.setAxe(stoneAxe);
         chinese.useAxe();
     }

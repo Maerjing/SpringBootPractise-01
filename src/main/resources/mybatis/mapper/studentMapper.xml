@@ -23,16 +23,16 @@
     </insert>
 
     <!--    void updateStudent(List<Student> students);-->
-<!--    <update id="updateStudent" parameterType="com.bilibili.bean.Student">-->
-<!--        <foreach collection="students" item="student">-->
-<!--        update student-->
-<!--            <set>-->
-<!--                student.sname=#{student.sname},student.cid=#{student.cid} where sno=#{student.sid}-->
-<!--            </set>-->
+    <!--    <update id="updateStudent" parameterType="com.bilibili.bean.Student">-->
+    <!--        <foreach collection="students" item="student">-->
+    <!--        update student-->
+    <!--            <set>-->
+    <!--                student.sname=#{student.sname},student.cid=#{student.cid} where sno=#{student.sid}-->
+    <!--            </set>-->
 
-<!--            # update student set sname=#{student.sname},cid=#{student.cid} where sno=#{student.sid}-->
-<!--        </foreach>-->
-<!--    </update>-->
+    <!--            # update student set sname=#{student.sname},cid=#{student.cid} where sno=#{student.sid}-->
+    <!--        </foreach>-->
+    <!--    </update>-->
 
 
 </mapper>

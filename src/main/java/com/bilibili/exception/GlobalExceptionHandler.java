@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler({ArithmeticException.class,NullPointerException.class})
-    public String handlerArithException(){
+    @ExceptionHandler({ArithmeticException.class, NullPointerException.class})
+    public String handlerArithException() {
         return "login";
     }
 }

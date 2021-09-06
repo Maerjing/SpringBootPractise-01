@@ -13,6 +13,7 @@ public class ClassServiceImpl implements ClassService {
 
     @Autowired
     ClassMapper classMapper;
+
     @Override
     public Class queryClass(int cid) {
         Class classes = classMapper.queryClass(cid);

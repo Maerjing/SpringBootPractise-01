@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bilibili.mapper.ClassMapper">
-<!--        Class queryClass(int cid);-->
+    <!--        Class queryClass(int cid);-->
     <select id="queryClass" resultMap="classStudent">
         select class.cid,cname,sno,sname,student.cid from student,class where class.cid=#{cid} AND student.cid=#{cid}
     </select>

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 public class AdminServiceImpl implements AdminService {
     @Autowired
     AdminMapper adminMapper;
+
     @Override
     public Admin queryAdmin(String tid) {
         return adminMapper.queryAdmin(tid);
